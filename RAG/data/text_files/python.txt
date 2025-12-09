@@ -1,0 +1,12 @@
+PYTHON: A BRIEF INTRODUCTION
+
+Python is a high-level, interpreted, general-purpose programming language. It was first released in 1991 by Guido van Rossum.
+
+KEY FEATURES:
+
+1.  **Readability:** Python emphasizes code readability with its clean, whitespace-based syntax (indentation). This makes the code easier to learn, read, and maintain than many other languages.
+2.  **Versatility (General Purpose):** It is used for a vast range of tasks, including web development (Django, Flask), data science (Pandas, NumPy), machine learning (PyTorch, TensorFlow), scripting, automation, and software testing.
+3.  **Interpreted:** Python code is executed line-by-line by an interpreter, which allows for fast prototyping and debugging.
+4.  **Large Standard Library:** Python comes with a massive collection of modules and functions (the standard library) that handle common programming tasks without needing to install external packages.
+
+Python's simple structure and extensive ecosystem have made it one of the most popular programming languages globally for both beginners and experienced developers.

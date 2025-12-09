@@ -1,0 +1,12 @@
+MACHINE LEARNING (ML): A BRIEF INTRODUCTION
+
+Machine Learning is a subfield of Artificial Intelligence (AI) that focuses on building systems that can learn from data, identify patterns, and make decisions with minimal human intervention.
+CORE CONCEPT:
+Instead of being explicitly programmed with rules to solve a problem (traditional programming), ML algorithms are fed large amounts of data and use statistical methods to discover relationships within that data.
+
+MAIN TYPES OF ML:
+1.  **Supervised Learning:** The model is trained on labeled data—meaning the input data is paired with the correct output (e.g., training a system with images labeled 'cat' or 'dog'). It is used for prediction and classification.
+2.  **Unsupervised Learning:** The model is trained on unlabeled data and must find hidden patterns or structures on its own (e.g., grouping customers into segments). It is used for clustering and dimensionality reduction.
+3.  **Reinforcement Learning (RL):** An agent learns by interacting with an environment, receiving rewards for correct actions and penalties for incorrect ones. It is often used in robotics and complex decision-making systems.
+
+ML is the driving force behind modern technologies like recommendation systems, facial recognition, autonomous driving, and large language models (LLMs).
