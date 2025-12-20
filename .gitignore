@@ -6,9 +6,6 @@ __pycache__/
 # C extensions
 *.so
 #  uv stuff
-uv.lock
-pyproject.toml
-.python-version
 
 # Distribution / packaging
 .Python
