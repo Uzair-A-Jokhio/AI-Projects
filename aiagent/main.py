@@ -54,25 +54,37 @@ def main():
         tools=[avaliable_tools],
         system_instruction=system_prompt)
 
-    response = client.models.generate_content(
-        model="gemini-3-flash-preview",
-        contents=messages,
-        config=config
-    )
+    max_iter = 20
+    for i in range(0, max_iter):
 
-    if response is None or response.usage_metadata is None:
-        print("Response is malformed")
+        response = client.models.generate_content(
+            model="gemini-3-flash-preview",
+            contents=messages,
+            config=config
+        )
 
-    if verbose_flag:
-        print(f"User Prompt: {prompt}")
-        print(f"Prompts tokens: {response.usage_metadata.prompt_token_count}")
-        print(f"Response tokens:{response.usage_metadata.candidates_token_count}")
+        if response is None or response.usage_metadata is None:
+            print("Response is malformed")
 
-    if response.function_calls:
-        for function_call_part in response.function_calls:
-            result=call_function(function_call_part, verbose_flag)
-            print(result)
-    else:
-        print(response.text)
+        if verbose_flag:
+            print(f"User Prompt: {prompt}")
+            print(f"Prompts tokens: {response.usage_metadata.prompt_token_count}")
+            print(f"Response tokens:{response.usage_metadata.candidates_token_count}")
+
+        if response.candidates:
+            for candidate in response.candidates:
+                if candidate is None or candidate.content:
+                    continue 
+                messages.append(candidate.content)
+        
+        if response.function_calls:
+            for function_call_part in response.function_calls:
+                result=call_function(function_call_part, verbose_flag)
+                messages.append(result)
+
+        else:
+            # final agent text message
+            print(response.text)
+            return 
 
 main()
